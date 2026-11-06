@@ -17,7 +17,13 @@ public class Dice : MonoBehaviour
     public float randomForce = 1f;
 
     [Header("Roll Time")]
-    public float minimumRollTime = 3f;
+    public float minimumRollTime = 1.5f;
+    public float maximumRollTime = 5f;
+
+    [Header("Stopping")]
+    public float stopVelocity = 0.15f;
+    public float stopAngularVelocity = 0.15f;
+    public float stopCheckDuration = 0.4f;
 
     [Header("Face Directions")]
     public Vector3 face1 = Vector3.up;
@@ -36,6 +42,7 @@ public class Dice : MonoBehaviour
 
     private Vector3 startPosition;
     private Quaternion startRotation;
+    private float lastGroundTime = -1000f;
 
     private Vector3 GetVelocity()
     {
@@ -70,9 +77,44 @@ public class Dice : MonoBehaviour
         CancelRoll();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        CheckGround(collision);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        CheckGround(collision);
+    }
+
+    private void CheckGround(Collision collision)
+    {
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            Vector3 normal = collision.GetContact(i).normal;
+
+            if (Vector3.Dot(normal, Vector3.up) > 0.5f)
+            {
+                lastGroundTime = Time.fixedTime;
+                return;
+            }
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        float timeSinceGround = Time.fixedTime - lastGroundTime;
+
+        if (timeSinceGround <= Time.fixedDeltaTime * 1.5f)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public void RollDice()
     {
-        
 
         if (rolling)
         {
@@ -86,8 +128,7 @@ public class Dice : MonoBehaviour
 
         rollCoroutine = StartCoroutine(RollRoutine());
     }
-    
-
+     
     private IEnumerator RollRoutine()
     {
         rolling = true;
@@ -101,15 +142,56 @@ public class Dice : MonoBehaviour
             Debug.Log("Rolling dice");
         }
 
-        yield return new WaitForSeconds(minimumRollTime);
-        currentNumber = GetTopFaceNumber();
+        float rollTime = 0f;
+        float stoppedTime = 0f;
+
+        WaitForFixedUpdate wait = new WaitForFixedUpdate();
+
+        while (true)
+        {
+            yield return wait;
+
+            float step = Time.fixedDeltaTime;
+
+            rollTime += step;
+
+            bool grounded = IsGrounded();
+            bool sleeping = rb.IsSleeping();
+            
+            bool movingSlow = GetVelocity().magnitude <= stopVelocity;
+            bool spinningSlow = rb.angularVelocity.magnitude <= stopAngularVelocity;
+
+            bool stopped = sleeping;
+
+            if (grounded && movingSlow && spinningSlow)
+            {
+                stopped = true;
+            }
+
+            if (stopped)
+            {
+                stoppedTime += step;
+            }
+            else
+            {
+                stoppedTime = 0f;
+            }
+
+            bool finished = rollTime >= minimumRollTime && stoppedTime >= stopCheckDuration;
+
+            if (finished || rollTime >= maximumRollTime)
+            {
+                currentNumber = GetTopFaceNumber();
+                break;
+            }
+        }
 
         rolling = false;
         rollCoroutine = null;
 
         if (showDebug)
         {
-            Debug.Log("Roll timer ended");
+            Debug.Log("Dice landed on " + currentNumber);
         }
     }
 
@@ -209,6 +291,8 @@ public class Dice : MonoBehaviour
 
     private void PrepareDice()
     {
+        lastGroundTime = -1000f;
+
         rb.isKinematic = false;
         rb.useGravity = true;
 
