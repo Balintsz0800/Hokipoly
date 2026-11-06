@@ -2,12 +2,15 @@
 using System.Collections;
 
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour
 {
     [Header("Dice Settings")]
+    [Range(1, 6)] public int targetNumber = 6;
     public bool rollOnStart = false;
+    public bool randomTarget = false;
     public bool showDebug = true;
 
     [Header("Roll Forces")]
@@ -19,6 +22,12 @@ public class Dice : MonoBehaviour
     [Header("Roll Time")]
     public float minimumRollTime = 1.5f;
     public float maximumRollTime = 5f;
+    public float guidanceStartTime = 0.8f;
+
+    [Header("Guidance")]
+    public float guidanceStrength = 18f;
+    public float guidanceDamping = 5f;
+    public float aligmentTolerance = 5f;
 
     [Header("Stopping")]
     public float stopVelocity = 0.15f;
@@ -126,10 +135,34 @@ public class Dice : MonoBehaviour
             return;
         }
 
-        rollCoroutine = StartCoroutine(RollRoutine());
+        if (randomTarget)
+        {
+            targetNumber = Random.Range(1, 7);
+        }
+
+        targetNumber = Mathf.Clamp(targetNumber, 1, 6);
+
+        rollCoroutine = StartCoroutine(RollRoutine(targetNumber));
+    }
+
+    public void RollToNumber(int number)
+    {
+        if (rolling || !isActiveAndEnabled)
+        {
+            return;
+        }
+
+        SetTargetNumber(number);
+        RollDice();
+    }
+
+    public void SetTargetNumber(int number)
+    {
+        targetNumber = Mathf.Clamp(number, 1, 6);
+        randomTarget = false;
     }
      
-    private IEnumerator RollRoutine()
+    private IEnumerator RollRoutine(int target)
     {
         rolling = true;
         currentNumber = 0;
@@ -139,7 +172,7 @@ public class Dice : MonoBehaviour
 
         if (showDebug)
         {
-            Debug.Log("Rolling dice");
+            Debug.Log("Rolling Towards " + target);
         }
 
         float rollTime = 0f;
@@ -191,7 +224,7 @@ public class Dice : MonoBehaviour
 
         if (showDebug)
         {
-            Debug.Log("Dice landed on " + currentNumber);
+            Debug.Log("Dice landed on " + currentNumber + " (target: " + target +")");
         }
     }
 
