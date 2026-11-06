@@ -2,12 +2,15 @@
 using System.Collections;
 
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour
 {
     [Header("Dice Settings")]
+    [Range(1, 6)] public int targetNumber = 6;
     public bool rollOnStart = false;
+    public bool randomTarget = false;
     public bool showDebug = true;
 
     [Header("Roll Forces")]
@@ -17,7 +20,19 @@ public class Dice : MonoBehaviour
     public float randomForce = 1f;
 
     [Header("Roll Time")]
-    public float minimumRollTime = 3f;
+    public float minimumRollTime = 1.5f;
+    public float maximumRollTime = 5f;
+    public float guidanceStartTime = 0.8f;
+
+    [Header("Guidance")]
+    public float guidanceStrength = 18f;
+    public float guidanceDamping = 5f;
+    public float aligmentTolerance = 5f;
+
+    [Header("Stopping")]
+    public float stopVelocity = 0.15f;
+    public float stopAngularVelocity = 0.15f;
+    public float stopCheckDuration = 0.4f;
 
     [Header("Face Directions")]
     public Vector3 face1 = Vector3.up;
@@ -36,6 +51,7 @@ public class Dice : MonoBehaviour
 
     private Vector3 startPosition;
     private Quaternion startRotation;
+    private float lastGroundTime = -1000f;
 
     private Vector3 GetVelocity()
     {
@@ -70,9 +86,44 @@ public class Dice : MonoBehaviour
         CancelRoll();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        CheckGround(collision);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        CheckGround(collision);
+    }
+
+    private void CheckGround(Collision collision)
+    {
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            Vector3 normal = collision.GetContact(i).normal;
+
+            if (Vector3.Dot(normal, Vector3.up) > 0.5f)
+            {
+                lastGroundTime = Time.fixedTime;
+                return;
+            }
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        float timeSinceGround = Time.fixedTime - lastGroundTime;
+
+        if (timeSinceGround <= Time.fixedDeltaTime * 1.5f)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public void RollDice()
     {
-        
 
         if (rolling)
         {
@@ -84,11 +135,34 @@ public class Dice : MonoBehaviour
             return;
         }
 
-        rollCoroutine = StartCoroutine(RollRoutine());
-    }
-    
+        if (randomTarget)
+        {
+            targetNumber = Random.Range(1, 7);
+        }
 
-    private IEnumerator RollRoutine()
+        targetNumber = Mathf.Clamp(targetNumber, 1, 6);
+
+        rollCoroutine = StartCoroutine(RollRoutine(targetNumber));
+    }
+
+    public void RollToNumber(int number)
+    {
+        if (rolling || !isActiveAndEnabled)
+        {
+            return;
+        }
+
+        SetTargetNumber(number);
+        RollDice();
+    }
+
+    public void SetTargetNumber(int number)
+    {
+        targetNumber = Mathf.Clamp(number, 1, 6);
+        randomTarget = false;
+    }
+     
+    private IEnumerator RollRoutine(int target)
     {
         rolling = true;
         currentNumber = 0;
@@ -98,18 +172,59 @@ public class Dice : MonoBehaviour
 
         if (showDebug)
         {
-            Debug.Log("Rolling dice");
+            Debug.Log("Rolling Towards " + target);
         }
 
-        yield return new WaitForSeconds(minimumRollTime);
-        currentNumber = GetTopFaceNumber();
+        float rollTime = 0f;
+        float stoppedTime = 0f;
+
+        WaitForFixedUpdate wait = new WaitForFixedUpdate();
+
+        while (true)
+        {
+            yield return wait;
+
+            float step = Time.fixedDeltaTime;
+
+            rollTime += step;
+
+            bool grounded = IsGrounded();
+            bool sleeping = rb.IsSleeping();
+            
+            bool movingSlow = GetVelocity().magnitude <= stopVelocity;
+            bool spinningSlow = rb.angularVelocity.magnitude <= stopAngularVelocity;
+
+            bool stopped = sleeping;
+
+            if (grounded && movingSlow && spinningSlow)
+            {
+                stopped = true;
+            }
+
+            if (stopped)
+            {
+                stoppedTime += step;
+            }
+            else
+            {
+                stoppedTime = 0f;
+            }
+
+            bool finished = rollTime >= minimumRollTime && stoppedTime >= stopCheckDuration;
+
+            if (finished || rollTime >= maximumRollTime)
+            {
+                currentNumber = GetTopFaceNumber();
+                break;
+            }
+        }
 
         rolling = false;
         rollCoroutine = null;
 
         if (showDebug)
         {
-            Debug.Log("Roll timer ended");
+            Debug.Log("Dice landed on " + currentNumber + " (target: " + target +")");
         }
     }
 
@@ -209,6 +324,8 @@ public class Dice : MonoBehaviour
 
     private void PrepareDice()
     {
+        lastGroundTime = -1000f;
+
         rb.isKinematic = false;
         rb.useGravity = true;
 
