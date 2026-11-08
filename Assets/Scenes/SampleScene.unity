@@ -5018,7 +5018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No Batido concert
+  m_text: No Batidao concert
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -9326,6 +9326,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &721964153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721964154}
+  m_Layer: 0
+  m_Name: DiceSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721964154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721964153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24, y: -8, z: 24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &734818541
 GameObject:
   m_ObjectHideFlags: 0
@@ -13409,17 +13440,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1055308848}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1094670574 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8824589066377924213, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-  m_PrefabInstance: {fileID: 1565831992}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c608780298b296c4b9662f7f0865276f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dice
 --- !u!1 &1144480311
 GameObject:
   m_ObjectHideFlags: 0
@@ -16974,7 +16994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3833083426ac48549232515ad7179a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  dice: {fileID: 1094670574}
+  dicePrefab: {fileID: 8824589066377924213, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
+  diceSpawn: {fileID: 721964154}
 --- !u!1 &1466220100
 GameObject:
   m_ObjectHideFlags: 0
@@ -18194,63 +18215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
---- !u!1001 &1565831992
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3001060862609719127, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_Name
-      value: Dice
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 28.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
 --- !u!1 &1568394604
 GameObject:
   m_ObjectHideFlags: 0
@@ -24216,6 +24180,6 @@ SceneRoots:
   - {fileID: 1231573319}
   - {fileID: 1554514163}
   - {fileID: 1077033785}
-  - {fileID: 1565831992}
   - {fileID: 959231131}
   - {fileID: 1447203233}
+  - {fileID: 721964154}
