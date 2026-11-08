@@ -11,7 +11,7 @@ public class BoardTile : MonoBehaviour
 
     private void Start()
     {
-        highLight.SetActive(false);
+        SetHighLight(false);
     }
 
     public void SetHighLight(bool active)

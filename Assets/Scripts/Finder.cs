@@ -5,7 +5,7 @@ public class Finder : MonoBehaviour
 {
     private BoardManager boardManager;
     private Movement movement;
-    private Camera camera;
+    private Camera mainCamera;
     
     private BoardTile selectedTile;
     private bool isActive;
@@ -14,18 +14,18 @@ public class Finder : MonoBehaviour
     {
         boardManager = manager;
         movement = playerMovement;
-        camera = Camera.main;
+        mainCamera = Camera.main;
         isActive = true;
     }
 
     private void Update()
     {
-        if (!isActive || movement.isMoving)
+        if (!isActive || movement == null || movement.isMoving || mainCamera == null)
         {
             return;
         }
         
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
