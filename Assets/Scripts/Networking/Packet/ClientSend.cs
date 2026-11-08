@@ -7,6 +7,11 @@ public static class ClientSend
             writer.Put(username);
         });
     }
+
+    public static void Ready()
+    {
+        NetworkManager.Instance.Client.SendPacket(ClientPacketId.Ready);
+    }
     
     public static void Roll()
     {

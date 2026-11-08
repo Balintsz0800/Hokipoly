@@ -145,6 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8630507581664973223}
+  - component: {fileID: 4467155403364691454}
   m_Layer: 5
   m_Name: LobbyPlayer
   m_TagString: Untagged
@@ -173,6 +174,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4467155403364691454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253768396496211689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd6c7120d114d21a0143db29caf87f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LobbyPlayerUIElement
+  readyText: {fileID: 5249132117576378797}
+  playerNameText: {fileID: 7417347825360148196}
 --- !u!1 &6695465552765920448
 GameObject:
   m_ObjectHideFlags: 0

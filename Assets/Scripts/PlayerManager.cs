@@ -5,8 +5,10 @@ public class Player
 {
     public int id;
     public string username;
-
     public bool ready;
+
+    public int currentCell;
+    public int money;
 }
 
 public class PlayerManager : MonoBehaviour

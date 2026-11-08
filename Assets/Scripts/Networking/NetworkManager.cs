@@ -8,6 +8,8 @@ public class NetworkManager : MonoBehaviour
     public Server Server;
 
     public bool isHost;
+
+    public int myId;
     
     public static NetworkManager Instance;
 
@@ -32,7 +34,7 @@ public class NetworkManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame && Client != null)
         {
             ClientSend.Roll();
         } 
@@ -80,6 +82,7 @@ public class NetworkManager : MonoBehaviour
     {
         Debug.Log($"{username} joined the game ({playerId})");
         
+        if (PlayerManager.Instance.TryGetPlayer(playerId, out _)) return;
         PlayerManager.Instance.AddPlayer(playerId, username);
         
         if (isHost)
@@ -91,11 +94,14 @@ public class NetworkManager : MonoBehaviour
                 ServerSend.PlayerJoined(playerId, player.id, player.username);
             }
         }
+        
+        UIManager.Instance.LobbyUI.RefreshLobbyUI();
     }
 
     public void OnPlayerLeft(int playerId)
     {
         PlayerManager.Instance.RemovePlayer(playerId);
+        UIManager.Instance.LobbyUI.RefreshLobbyUI();
         Debug.Log($"Player ({playerId}) disconnected");
     }
     
@@ -106,6 +112,7 @@ public class NetworkManager : MonoBehaviour
         Server = null;
 
         isHost = false;
+        PlayerManager.Instance.players.Clear();
         
         UIManager.Instance.SwitchUIState(UIState.MainMenu);
     }

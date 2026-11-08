@@ -1,8 +1,11 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class LobbyPlayerUIElement : MonoBehaviour
 {
+    [NonSerialized] public int id;
+    
     public TMP_Text readyText;
     public TMP_Text playerNameText;
 

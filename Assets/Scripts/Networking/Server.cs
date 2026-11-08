@@ -40,6 +40,7 @@ public class Server
     private static void RegisterPackets()
     {
         PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Username, ServerHandle.Username);
+        PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Ready, ServerHandle.Ready);
         PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Roll, ServerHandle.Roll);
     }
 
@@ -54,6 +55,7 @@ public class Server
     private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
     {
         NetworkManager.Instance.OnPlayerLeft(peer.Id);
+        ServerSend.PlayerLeft(peer.Id);
     }
 
     private static void OnNetworkReceive(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)

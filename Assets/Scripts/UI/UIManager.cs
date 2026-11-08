@@ -6,15 +6,19 @@ public enum UIState
     MainMenu,
     Rules,
     Connecting,
-    Lobby
+    Lobby,
+    Game
 }
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject BG;
+    
     public MainMenuManager MainMenu;
     public NetworkUIManager NetworkUI;
     public LobbyUIManager LobbyUI;
     public GameObject RulesUI;
+    public GameUIManager GameUI;
     
     public UIState currentState = UIState.MainMenu;
     
@@ -42,6 +46,14 @@ public class UIManager : MonoBehaviour
         RulesUI.gameObject.SetActive(state == UIState.Rules);
         NetworkUI.gameObject.SetActive(state == UIState.Connecting);
         LobbyUI.gameObject.SetActive(state == UIState.Lobby);
+        GameUI.gameObject.SetActive(state == UIState.Game);
+        
+        BG.SetActive(state != UIState.Game);
+
+        if (state == UIState.Game)
+        {
+            GameUI.RefreshGameUI();
+        }
 
         currentState = state;
     }
