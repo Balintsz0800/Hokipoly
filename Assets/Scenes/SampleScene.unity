@@ -2197,40 +2197,42 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "H is the maney used in the game. For exemole H 200 means 200 game money\nJoin
+  m_text: "H is the money used in the game. For exemole H 200 means 200 game money\nJoin
     game create a game room or join a room with a code\neach player choose a name
-    and playing piece\neach player starts with H 1500\nthe game choose who gose firs\nTake
-    your turn\nthe game shows whose turn it is only thet player can rool the dice
-    and make choices\n1. roll the dice\n2. your piece moves automatically\n3. follow
-    the message on the screen\n4. when you finish press End Turn\nWhen you pass or
-    land on GO collect H 200 the game adds the money automatically\nIf you roll the
-    same number on both dice you get another turn. If you roll doubles three times
-    in a row the game sends you straight to jail\nBuy property and pay rent\nIf you
-    land on a property nobody owns you can buy ir for the price shown on the screen
-    if you do not buy it you can leave it for another player\nif another player owns
-    the property pay the rent shown on its card. The game takes the money from you
-    andgives it to the owner has the property card shows the rent\nBuild house and
-    hotels\nyou must own every property in a color group before you can build on
-    it\nbuild houses evenly across the group each proporty must have one house before
-    any can have a second\na property can have up to four houses \nafter thet you
-    can upgrade the houses to a hotel if one is available \nthe game show the cost
-    before you comfirm a purchase\nyou cannot build on a color group id one of its
-    properties is mortgaged\nCards and special spaces\nwhen you land on chance or
-    community chest the game shows you card  follow its instructions\npay any tax
-    or fee shown on the screen\nbank is a place whre you can get money but after
-    a while you have to pay back a litle more maney than you get from the bank\nif
+    and playing piece\neach player starts with H 1500\n\nThe game choose who gose
+    firs\nTake your turn\nThe game shows whose turn it is only thet player can rool
+    the dice and make choices\n1. roll the dice\n2. your piece moves automatically\n3.
+    follow the message on the screen\n4. when you finish press End Turn\n\nWhen you
+    pass or land on GO collect H 200 the game adds the money automatically\nIf you
+    roll the same number on both dice you get another turn. If you roll doubles three
+    times in a row the game sends you straight to jail\n\nBuy property and pay rent\nIf
+    you land on a property nobody owns you can buy ir for the price shown on the
+    screen if you do not buy it you can leave it for another player\nif another player
+    owns the property pay the rent shown on its card. The game takes the money from
+    you andgives it to the owner has the property card shows the rent\n\nBuild house
+    and hotels\nyou must own every property in a color group before you can build
+    on it\nbuild houses evenly across the group each proporty must have one house
+    before any can have a second\na property can have up to four houses \nafter thet
+    you can upgrade the houses to a hotel if one is available \nthe game show the
+    cost before you comfirm a purchase\nyou cannot build on a color group id one
+    of its properties is mortgaged\n\nCards and special spaces\nwhen you land on
+    chance or community chest the game shows you card  follow its instructions\npay
+    any tax or fee shown on the screen\nbank is a place whre you can get money but
+    after a while you have to pay back a litle more maney than you get from the bank\nif
     a card or space sends you to jail the game moves your piece there. You do not
-    collect H 200 for passing GO\njail\nyou go to jail if a apace or card sends you
-    there or if you roll doubles three times in a row\nto leave jail choose  one
-    of these options\npay H 50\nese a get out of jail free card or\ntry roll doubles\nyou
+    collect H 200 for passing GO\n\nJail\nYou go to jail if a apace or card sends
+    you there or if you roll doubles three times in a row\nto leave jail choose one
+    of these options\nPay H 50\nUse a get out of jail free card or\nTry roll doubles\nYou
     can try to roll doubles for up to three turns if do not roll doubles on your
     third try pay H 50 and move using that roll  if you roll doubles leaves jail
     and move you do not get another roll\nwhile in jail you can still collect rent
-    and make trades\ntrades and mortgages\nyou can send another player a trade offer
-    with money properties or a get out of jail free card the other player can accept
-    of reject it a trade happens only when both players agree\nyou can mortgage a
-    property to borrow money from the bank y\xEDou cannot collect rent on it is mortagage
-    amount and interest shown in the game \nhow to win  "
+    and make trades\n\nTrades and mortgages\nYou can send another player a trade
+    offer with money properties or a get out of jail free card the other player can
+    accept of reject it a trade happens only when both players agree\nyou can mortgage
+    a property to borrow money from the bank y\xEDou cannot collect rent on it is
+    mortagage amount and interest shown in the game \n\nHow to win \nIf you owe money
+    and cannot pay you are bankrupt and leave the game. The last player still in
+    the game wins."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3462,6 +3464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bfb07e777d47779bc8e69ce9aba172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyUIManager
+  lobbyPlayersHolder: {fileID: 0}
+  lobbyPlayerPrefab: {fileID: 0}
 --- !u!1 &1525137821
 GameObject:
   m_ObjectHideFlags: 0
