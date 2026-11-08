@@ -11,12 +11,12 @@ public class Server
     {
         listener = new EventBasedNetListener();
         server = new NetManager(listener);
+
+        AssignEvents();
+        RegisterPackets();
         
         Debug.Log("Starting server on port " + port);
         server.Start(port);
-        
-        AssignEvents();
-        RegisterPackets();
     }
 
     public void Stop()
@@ -31,6 +31,7 @@ public class Server
 
     private void AssignEvents()
     {
+        listener.ConnectionRequestEvent += OnConnectionRequest;
         listener.NetworkReceiveEvent += OnNetworkReceive;
     }
 
@@ -44,7 +45,17 @@ public class Server
         string message = reader.GetString();
         Debug.Log(message);
     }
-    
+
+    private void OnConnectionRequest(ConnectionRequest request)
+    {
+        Debug.Log($"Connection request received from {request.RemoteEndPoint}");
+        
+        if (server.ConnectedPeersCount < 6)
+            request.AcceptIfKey("a");
+        else
+            request.Reject();
+    }
+
     private static void OnNetworkReceive(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
     {
         PacketRouter.HandleServerPacket(peer, reader);

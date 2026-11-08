@@ -11,109 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acd2d03a-84e3-478d-a74a-30badfa670d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/BaseChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/BaseChannel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/ConnectionRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/ConnectionRequest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/INetEventListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/INetEventListener.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/InternalPackets.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/InternalPackets.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers/Crc32cLayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers/Crc32cLayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers/PacketLayerBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers/PacketLayerBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers/XorEncryptLayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Layers/XorEncryptLayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetLib.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetLib.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetLib.csproj.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.HashSet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.HashSet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.PacketPool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.PacketPool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.Socket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.Socket.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetPeer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/LiteNetPeer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NatPunchModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NatPunchModule.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NativeSocket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NativeSocket.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetConstants.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetConstants.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetDebug.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetDebug.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetPacket.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetPacketReader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetPacketReader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetPeer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetPeer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetStatistics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetStatistics.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetUtils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/NetUtils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/PausedSocketFix.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/PausedSocketFix.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/PooledPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/PooledPacket.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/ReliableChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/ReliableChannel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/SequencedChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/SequencedChannel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Trimming.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Trimming.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/CRC32C.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/CRC32C.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/FastBitConverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/FastBitConverter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/INetSerializable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/INetSerializable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetDataReader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetDataReader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetDataWriter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetDataWriter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetPacketProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetPacketProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetSerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NetSerializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NtpPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NtpPacket.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NtpRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/NtpRequest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/Preserve.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/Utils/Preserve.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/LiteNetLib/package.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Client.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PacketId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PacketId.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PacketRouter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PacketRouter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/NetworkUIManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/NetworkUIManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hokipoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hokipoly/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/NetworkUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/NetworkUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,60 +45,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000119386563462" />
-      <entry key="S2" value="1.0593438427537276" />
-      <entry key="S5" value="1.4374009042831484" />
-      <entry key="S10" value="2.3291053709782963" />
-      <entry key="S30" value="6.595782019444441" />
-      <entry key="S60" value="14.167663366686979" />
-      <entry key="M2" value="29.404223190694047" />
-      <entry key="M5" value="83.84076011602224" />
-      <entry key="M10" value="190.64098644552388" />
-      <entry key="M15" value="286.9881035943418" />
-      <entry key="M30" value="489.3733952184626" />
-      <entry key="H1" value="716.0364441015982" />
-      <entry key="H2" value="944.8000391578979" />
-      <entry key="H4" value="1133.250201877578" />
-      <entry key="D1" value="1360.6681902461853" />
-      <entry key="W1" value="1408.689608316624" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000000342" />
+      <entry key="S5" value="1.0000079145874485" />
+      <entry key="S10" value="1.0048690759423977" />
+      <entry key="S30" value="1.367841849646882" />
+      <entry key="S60" value="2.5506407788851106" />
+      <entry key="M2" value="6.35712538279067" />
+      <entry key="M5" value="18.944179559134422" />
+      <entry key="M10" value="47.940511212625" />
+      <entry key="M15" value="95.44173487419465" />
+      <entry key="M30" value="266.4138054187146" />
+      <entry key="H1" value="531.7147756058135" />
+      <entry key="H2" value="827.7873453183734" />
+      <entry key="H4" value="1080.712334724988" />
+      <entry key="D1" value="1394.1014272956936" />
+      <entry key="W1" value="1461.3298053371204" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.504871680440306E-5" />
-      <entry key="MS500" value="0.10851752845075242" />
-      <entry key="S2" value="0.5748393009239972" />
-      <entry key="S5" value="0.8610477096401777" />
-      <entry key="S10" value="1.152438954276669" />
-      <entry key="S30" value="2.370589713097178" />
-      <entry key="S60" value="4.5342075218946345" />
-      <entry key="M2" value="8.515701530152008" />
-      <entry key="M5" value="18.152779495412677" />
-      <entry key="M10" value="34.05892615478731" />
-      <entry key="M15" value="48.502263120633685" />
-      <entry key="M30" value="79.94459229692794" />
-      <entry key="H1" value="115.83357658587995" />
-      <entry key="H2" value="152.11201390542846" />
-      <entry key="H4" value="182.19991427289267" />
-      <entry key="D1" value="218.85908232699512" />
-      <entry key="W1" value="226.65000579836126" />
+      <entry key="MS100" value="1.429638957320629E-283" />
+      <entry key="MS500" value="2.698020684056788E-57" />
+      <entry key="S2" value="7.207112789369022E-15" />
+      <entry key="S5" value="2.203456735044833E-6" />
+      <entry key="S10" value="0.0014844349533249153" />
+      <entry key="S30" value="0.122883952246344" />
+      <entry key="S60" value="0.5713210678953279" />
+      <entry key="M2" value="1.9303653749743226" />
+      <entry key="M5" value="5.762102160168991" />
+      <entry key="M10" value="12.190612441782822" />
+      <entry key="M15" value="20.734623845965128" />
+      <entry key="M30" value="49.23553399297164" />
+      <entry key="H1" value="92.34466915340728" />
+      <entry key="H2" value="139.93962158139817" />
+      <entry key="H4" value="180.58809558878795" />
+      <entry key="D1" value="231.20205346839887" />
+      <entry key="W1" value="242.10553511773276" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.014782153673220671" />
-      <entry key="MS500" value="0.4501441386535816" />
-      <entry key="S2" value="1.2203129146457479" />
-      <entry key="S5" value="2.009346289321382" />
-      <entry key="S10" value="3.2492996893578043" />
-      <entry key="S30" value="8.801447708455695" />
-      <entry key="S60" value="18.559904390325226" />
-      <entry key="M2" value="37.78822061888709" />
-      <entry key="M5" value="101.85215555901284" />
-      <entry key="M10" value="224.54922608571468" />
-      <entry key="M15" value="335.34316694515974" />
-      <entry key="M30" value="569.1922279215327" />
-      <entry key="H1" value="831.7753612074413" />
-      <entry key="H2" value="1096.8482438778685" />
-      <entry key="H4" value="1315.411418199349" />
-      <entry key="D1" value="1579.5194609745497" />
-      <entry key="W1" value="1635.3384571785682" />
+      <entry key="MS100" value="5.687175715178005E-4" />
+      <entry key="MS500" value="0.22437751266681538" />
+      <entry key="S2" value="0.6882478007953889" />
+      <entry key="S5" value="0.8611979108087143" />
+      <entry key="S10" value="0.9343099465364347" />
+      <entry key="S30" value="1.4644111582487358" />
+      <entry key="S60" value="3.1005056371245683" />
+      <entry key="M2" value="8.259225186575094" />
+      <entry key="M5" value="24.675313020460294" />
+      <entry key="M10" value="60.09447250265756" />
+      <entry key="M15" value="116.12852766916659" />
+      <entry key="M30" value="315.58199156538325" />
+      <entry key="H1" value="623.9900727219496" />
+      <entry key="H2" value="967.6716525657532" />
+      <entry key="H4" value="1261.2638591212885" />
+      <entry key="D1" value="1625.2955378399274" />
+      <entry key="W1" value="1703.4341490704114" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -229,6 +136,16 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Documents/HokiPolyBuild\Hokipoly.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\balu\Documents\HokiPolyBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Unity\Projects\Hokipoly -debugCodeOptimization" />
@@ -277,7 +194,7 @@
       <workItem from="1793957583090" duration="2068000" />
       <workItem from="1793978599938" duration="5535000" />
       <workItem from="1794063372266" duration="7233000" />
-      <workItem from="1794127581441" duration="2714000" />
+      <workItem from="1794127581441" duration="4825000" />
     </task>
     <servers />
   </component>

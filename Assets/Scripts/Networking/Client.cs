@@ -17,11 +17,11 @@ public class Client
      
         Debug.Log($"Connecting -> {ip}:{port}...");
      
-        client.Start();
-        client.Connect(ip, port, "a");
-        
         AssignEvents();
         RegisterPackets();
+        
+        client.Start();
+        client.Connect(ip, port, "a");
     }
 
     public void Disconnect()

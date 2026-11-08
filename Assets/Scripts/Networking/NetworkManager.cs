@@ -18,10 +18,14 @@ public class NetworkManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void Connect()
+    private void FixedUpdate()
     {
-        string ip = UIManager.Instance.NetworkUI.GetIP();
+        Client?.Update();
+        Server?.Update();
+    }
 
+    public void Connect(string ip)
+    {
         Client = new Client(ip, 6700);
     }
 
