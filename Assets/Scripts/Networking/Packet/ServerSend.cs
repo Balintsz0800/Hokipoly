@@ -45,7 +45,7 @@ public static class ServerSend
 
     public static void StartGame()
     {
-        NetworkManager.Instance.Server.SendPacketToAll(ServerPacketId.MovePlayer, writer =>
+        NetworkManager.Instance.Server.SendPacketToAll(ServerPacketId.StartGame, writer =>
         {
 
         });
@@ -53,7 +53,7 @@ public static class ServerSend
 
     public static void MovePlayer(int playerId, int cell)
     {
-        NetworkManager.Instance.Server.SendPacketToAll(ServerPacketId.StartGame, writer =>
+        NetworkManager.Instance.Server.SendPacketToAll(ServerPacketId.MovePlayer, writer =>
         {
             writer.Put((ushort)playerId);
             writer.Put((ushort)cell);

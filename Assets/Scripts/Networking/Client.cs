@@ -40,6 +40,7 @@ public class Client
     {
         listener.PeerConnectedEvent += OnPeerConnected;
         listener.NetworkReceiveEvent += OnNetworkReceive;
+        listener.PeerDisconnectedEvent += OnPeerDisconnected;
     }
 
     private void OnPeerConnected(NetPeer peer)
@@ -49,6 +50,11 @@ public class Client
         serverPeer = peer;
 
         OnConnectedEvent?.Invoke();
+    }
+
+    private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
+    {
+        NetworkManager.Instance.Disconnect();
     }
 
     private static void RegisterPackets()

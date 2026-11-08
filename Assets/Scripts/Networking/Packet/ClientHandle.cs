@@ -34,7 +34,7 @@ public static class ClientHandle
     
     public static void StartGame(NetDataReader reader)
     {
-
+        UIManager.Instance.SwitchUIState(UIState.Game);
     }
 
     public static void MovePlayer(NetDataReader reader)
@@ -47,5 +47,11 @@ public static class ClientHandle
     {
         int playerId = reader.GetUShort();
         int money = reader.GetInt();
+
+        if (PlayerManager.Instance.TryGetPlayer(playerId, out Player player))
+        {
+            player.money = money;
+        }
+        UIManager.Instance.GameUI.UpdateMoney(playerId, money);
     }
 }

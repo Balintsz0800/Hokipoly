@@ -47,6 +47,11 @@ public class LobbyUIManager : MonoBehaviour
         
         if (playerId == NetworkManager.Instance.myId)
             this.ready = ready;
+
+        if (NetworkManager.Instance.isHost)
+        {
+            startButton.gameObject.SetActive(EveryoneReady());
+        }
     }
 
     public void ToggleReady()
@@ -75,6 +80,35 @@ public class LobbyUIManager : MonoBehaviour
         {
             readyButton.SetActive(true);
             unreadyButton.SetActive(false);
+        }
+        
+        
+    }
+
+    public bool EveryoneReady()
+    {
+        int playerCount = PlayerManager.Instance.players.Count;
+        int readyPlayerCount = 0;
+        
+        foreach (Player player in PlayerManager.Instance.players)
+        {
+            if(player.ready) readyPlayerCount++;
+        }
+
+        if (readyPlayerCount == playerCount) return true;
+
+        return false;
+    }
+
+    public void StartGame()
+    {
+        ServerSend.StartGame();
+        UIManager.Instance.SwitchUIState(UIState.Game);
+
+        foreach (Player player in PlayerManager.Instance.players)
+        {
+            ServerSend.UpdateMoney(player.id, 1000000);
+            UIManager.Instance.GameUI.UpdateMoney(player.id, 1000000);
         }
     }
 }
