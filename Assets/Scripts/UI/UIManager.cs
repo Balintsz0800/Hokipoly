@@ -4,6 +4,7 @@ using UnityEngine;
 public enum UIState
 {
     MainMenu,
+    Rules,
     Connecting,
     Lobby
 }
@@ -13,6 +14,7 @@ public class UIManager : MonoBehaviour
     public MainMenuManager MainMenu;
     public NetworkUIManager NetworkUI;
     public LobbyUIManager LobbyUI;
+    public GameObject RulesUI;
     
     public UIState currentState = UIState.MainMenu;
     
@@ -37,6 +39,7 @@ public class UIManager : MonoBehaviour
             return;
 
         MainMenu.gameObject.SetActive(state == UIState.MainMenu);
+        RulesUI.gameObject.SetActive(state == UIState.Rules);
         NetworkUI.gameObject.SetActive(state == UIState.Connecting);
         LobbyUI.gameObject.SetActive(state == UIState.Lobby);
 
@@ -54,5 +57,10 @@ public class UIManager : MonoBehaviour
     public void SwitchToNetworkUI()
     {
         SwitchUIState(UIState.Connecting);
+    }
+
+    public void SwitchToRulesUI()
+    {
+        SwitchUIState(UIState.Rules);
     }
 }
