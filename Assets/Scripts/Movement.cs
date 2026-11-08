@@ -50,7 +50,39 @@ public class Movement : MonoBehaviour
             transform.rotation = targetRotation;
         }
         isMoving = false;
-        Debug.Log("Current Cell: " + currentCell);
+        boardManager.PlayerLanded(currentCell);
+    }
+
+    public void MoveToCell(int targetIndex)
+    {
+        if (!isMoving && targetIndex >= 0 && targetIndex < cells.Length)
+        {
+            StartCoroutine(MoveToCellRoutine(targetIndex));
+        }
+    }
+
+    private IEnumerator MoveToCellRoutine(int targetIndex)
+    {
+        isMoving = true;
+        
+        Transform targetcell = cells[targetIndex];
+        Vector3 targetPos = new Vector3(targetcell.position.x, transform.position.y, targetcell.position.z);
+
+        Quaternion targetRotation = targetcell.rotation;
+        
+        while (Vector3.Distance(transform.position, targetPos) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                
+            yield return null;
+        }
+        transform.position = targetPos;
+        transform.rotation = targetRotation;
+        
+        currentCell = targetIndex;
+        isMoving = false;
+        
         boardManager.PlayerLanded(currentCell);
     }
 }

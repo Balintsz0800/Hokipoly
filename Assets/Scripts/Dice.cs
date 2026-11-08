@@ -28,6 +28,8 @@ public class Dice : MonoBehaviour
     public float guidanceStrength = 18f;
     public float guidanceDamping = 5f;
     public float aligmentTolerance = 5f;
+    public float recoveryBonceSpeed = 2f;
+    public int maxRecoveryBounces = 2;
 
     [Header("Stopping")]
     public float stopVelocity = 0.15f;
@@ -124,7 +126,6 @@ public class Dice : MonoBehaviour
 
     public void RollDice()
     {
-
         if (rolling)
         {
             return;
@@ -152,7 +153,7 @@ public class Dice : MonoBehaviour
             return;
         }
 
-        SetTargetNumber(number);
+        SetTargetNumber(number);    
         RollDice();
     }
 
@@ -177,6 +178,7 @@ public class Dice : MonoBehaviour
 
         float rollTime = 0f;
         float stoppedTime = 0f;
+        int bounces = 0;
 
         WaitForFixedUpdate wait = new WaitForFixedUpdate();
 
@@ -210,13 +212,79 @@ public class Dice : MonoBehaviour
                 stoppedTime = 0f;
             }
 
-            bool finished = rollTime >= minimumRollTime && stoppedTime >= stopCheckDuration;
+            bool firstRoll = bounces == 0;
+            float minTime = 0f;
 
+            if (firstRoll)
+            {
+                minTime = minimumRollTime;
+            }
+
+            bool finished = rollTime >= minTime && stoppedTime >= stopCheckDuration;
+
+            if (finished)
+            {
+                int topNumber = GetTopFaceNumber();
+
+                Vector3 faceDir = GetWorldFaceDirection(target);
+                float angle = Vector3.Angle(faceDir, Vector3.up);
+
+                if (topNumber == target && angle <= aligmentTolerance)
+                {
+                    currentNumber = target;
+                    break;
+                }
+            }
+            
             if (finished || rollTime >= maximumRollTime)
             {
-                currentNumber = GetTopFaceNumber();
-                break;
+                if (!grounded && !sleeping)
+                {
+                    break;
+                }
+
+                if (bounces >= maxRecoveryBounces)
+                {
+                    break;
+                }
+
+                if (recoveryBonceSpeed <= 0f)
+                {
+                    break;
+                }
+                
+                bounces ++;
+
+                rollTime = 0f;
+                stoppedTime = 0f;
+                lastGroundTime = -1000f;
+                
+                rb.WakeUp();
+                rb.AddForce(Vector3.up * recoveryBonceSpeed, ForceMode.VelocityChange);
+                
+                continue;
             }
+
+            float delay = 0f;
+
+            if (firstRoll)
+            {
+                delay = guidanceStartTime;
+            }
+
+            if (stopped || rollTime < delay)
+            {
+                continue;
+            }
+
+            float strength = 1f;
+
+            if (firstRoll)
+            {
+                float amount = (rollTime - delay) / 0.5f;
+                strength = Mathf.SmoothStep(0f, 1f, amount);
+            }
+            GuideDice(target, strength);
         }
 
         rolling = false;
@@ -224,8 +292,46 @@ public class Dice : MonoBehaviour
 
         if (showDebug)
         {
-            Debug.Log("Dice landed on " + currentNumber + " (target: " + target +")");
+            if (currentNumber == target)
+            {
+                Debug.Log("Dice landed on " + currentNumber);
+            }
+            else
+            {
+                Debug.LogWarning("Dice could not land on " + target);
+            }
         }
+    }
+
+    private void GuideDice(int target, float strength)
+    {
+        Vector3 faceDir = GetWorldFaceDirection(target); 
+        float angle = Vector3.Angle(faceDir, Vector3.up);
+
+        Vector3 correction = Vector3.zero;
+
+        if (angle > aligmentTolerance)
+        {
+            Vector3 axis = Vector3.Cross(faceDir, Vector3.up);
+
+            if (axis.magnitude < 0.001f)
+            {
+                axis = Vector3.ProjectOnPlane(rb.rotation * Vector3.right, Vector3.up);
+
+                if (axis.magnitude < 0.001f)
+                {
+                    axis = Vector3.ProjectOnPlane(rb.rotation * Vector3.forward, Vector3.up);
+                }
+            }
+            axis.Normalize();
+            
+            correction = axis * angle * Mathf.Deg2Rad * guidanceStrength;
+        }
+
+        Vector3 damping = -rb.angularVelocity * guidanceDamping;
+        Vector3 finalTorque = correction + damping;
+        
+        rb.AddTorque(finalTorque * strength, ForceMode.Acceleration);
     }
 
     public int GetTopFaceNumber()
@@ -305,11 +411,7 @@ public class Dice : MonoBehaviour
 
         randomDirection.Normalize();
 
-        Vector3 direction = new Vector3(
-            randomDirection.x,
-            0f,
-            randomDirection.y
-        );
+        Vector3 direction = new Vector3(randomDirection.x, 0f, randomDirection.y);
 
         Vector3 force = Vector3.up * upwardForce;
         force += direction * forwardForce;

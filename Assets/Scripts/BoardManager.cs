@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
+    [SerializeField] private Movement movement;
     [SerializeField] private BoardTile[] boardTiles;
+    public BoardTile[] BoardTiles => boardTiles;
     
     public void PlayerLanded(int finalCellIndex)
     {
@@ -24,8 +26,12 @@ public class BoardManager : MonoBehaviour
             case TileType.Purchased:
                 break;
             case TileType.Finder:
-                Debug.Log("Stepped on the finder tile");
-                HighlightTiles();
+                Finder finder = landedTile.GetComponent<Finder>();
+
+                if (finder != null)
+                {
+                    finder.Activate(this, movement);
+                }
                 break;
             case TileType.Prison:
                 break;
