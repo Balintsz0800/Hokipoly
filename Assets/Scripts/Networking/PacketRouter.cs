@@ -6,22 +6,22 @@ using UnityEngine;
 
 public static class PacketRouter
 {
-    private static readonly Dictionary<ushort, ServerMessageCallback> ServerMessageCallbacks = new Dictionary<ushort, ServerMessageCallback>();
-    private static readonly Dictionary<ushort, ClientMessageCallback> ClientMessageCallbacks = new Dictionary<ushort, ClientMessageCallback>();
+    private static readonly Dictionary<ushort, ServerPacketHandler> ServerMessageCallbacks = new Dictionary<ushort, ServerPacketHandler>();
+    private static readonly Dictionary<ushort, ClientPacketHandler> ClientMessageCallbacks = new Dictionary<ushort, ClientPacketHandler>();
     
-    public delegate void ServerMessageCallback(NetPeer sender, NetDataReader reader);
-    public delegate void ClientMessageCallback(NetPeer sender, NetDataReader reader);
+    public delegate void ServerPacketHandler(NetPeer sender, NetDataReader reader);
+    public delegate void ClientPacketHandler(NetDataReader reader);
 
     private const int HeaderSize = sizeof(ushort);
     
-    public static void RegisterServerPacket(ushort packetId, ServerMessageCallback callback)
+    public static void RegisterServerPacket(ushort packetId, ServerPacketHandler callback)
     {
         if(callback == null) return;
         
         ServerMessageCallbacks[packetId] = callback;
     }
 
-    public static void RegisterClientPacket(ushort packetId, ClientMessageCallback callback)
+    public static void RegisterClientPacket(ushort packetId, ClientPacketHandler callback)
     {
         if(callback == null) return;
         
@@ -36,7 +36,7 @@ public static class PacketRouter
 
             ushort packetId = reader.GetUShort();
 
-            if (!TryGetServerHandler(packetId, out ServerMessageCallback callback)) return;
+            if (!TryGetServerHandler(packetId, out ServerPacketHandler callback)) return;
 
             callback(peer, reader);
         }
@@ -46,12 +46,12 @@ public static class PacketRouter
         }
     }
 
-    public static bool TryGetServerHandler(ushort packetId, out ServerMessageCallback callback)
+    public static bool TryGetServerHandler(ushort packetId, out ServerPacketHandler callback)
     {
         return ServerMessageCallbacks.TryGetValue(packetId, out callback);
     }
 
-    public static void HandleClientPacket(NetPeer peer, NetPacketReader reader)
+    public static void HandleClientPacket(NetPacketReader reader)
     {
         try
         {
@@ -59,9 +59,9 @@ public static class PacketRouter
 
             ushort packetId = reader.GetUShort();
 
-            if (!TryGetServerHandler(packetId, out ServerMessageCallback callback)) return;
+            if (!TryGetClientHandler(packetId, out ClientPacketHandler callback)) return;
 
-            callback(peer, reader);
+            callback(reader);
         }
         catch (Exception exception)
         {
@@ -69,7 +69,7 @@ public static class PacketRouter
         }
     }
 
-    public static bool TryGetClientHandler(ushort packetId, out ClientMessageCallback callback)
+    public static bool TryGetClientHandler(ushort packetId, out ClientPacketHandler callback)
     {
         return ClientMessageCallbacks.TryGetValue(packetId, out callback);
     }

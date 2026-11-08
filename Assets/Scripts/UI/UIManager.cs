@@ -5,12 +5,14 @@ public enum UIState
 {
     MainMenu,
     Connecting,
+    Lobby
 }
 
 public class UIManager : MonoBehaviour
 {
     public MainMenuManager MainMenu;
     public NetworkUIManager NetworkUI;
+    public LobbyUIManager LobbyUI;
     
     public UIState currentState = UIState.MainMenu;
     
@@ -21,6 +23,7 @@ public class UIManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -35,6 +38,7 @@ public class UIManager : MonoBehaviour
 
         MainMenu.gameObject.SetActive(state == UIState.MainMenu);
         NetworkUI.gameObject.SetActive(state == UIState.Connecting);
+        LobbyUI.gameObject.SetActive(state == UIState.Lobby);
 
         currentState = state;
     }
