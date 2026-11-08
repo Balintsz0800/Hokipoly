@@ -4,12 +4,15 @@ using UnityEngine;
 public class BoardTile : MonoBehaviour
 {
     [Header("Tile Settings")] 
-    [SerializeField] private int tileIndex;
     [SerializeField] private TileType tileType;
     [SerializeField] private GameObject highLight;
     
-    public int TileIndex => tileIndex;
     public TileType Type => tileType;
+
+    private void Start()
+    {
+        highLight.SetActive(false);
+    }
 
     public void SetHighLight(bool active)
     {
