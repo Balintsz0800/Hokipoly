@@ -1,9 +1,18 @@
 using System;
 using UnityEngine;
 
+public enum UIState
+{
+    MainMenu,
+    Connecting,
+}
+
 public class UIManager : MonoBehaviour
 {
+    public MainMenuManager MainMenu;
     public NetworkUIManager NetworkUI;
+    
+    public UIState currentState = UIState.MainMenu;
     
     public static UIManager Instance;
 
@@ -17,5 +26,29 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SwitchUIState(UIState state)
+    {
+        if (currentState == state)
+            return;
+
+        MainMenu.gameObject.SetActive(state == UIState.MainMenu);
+        NetworkUI.gameObject.SetActive(state == UIState.Connecting);
+
+        currentState = state;
+    }
+
+
+
+
+    public void SwitchToMainMenu()
+    {
+        SwitchUIState(UIState.MainMenu);
+    }
+    
+    public void SwitchToNetworkUI()
+    {
+        SwitchUIState(UIState.Connecting);
     }
 }
