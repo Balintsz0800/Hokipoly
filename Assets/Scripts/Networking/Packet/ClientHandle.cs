@@ -5,11 +5,16 @@ public static class ClientHandle
     public static void PlayerJoined(NetDataReader reader)
     {
         int playerId = reader.GetUShort();
+        string username = reader.GetString();
+        
+        NetworkManager.Instance.OnPlayerJoined(playerId, username);
     }
 
     public static void PlayerLeft(NetDataReader reader)
     {
         int playerId = reader.GetUShort();
+        
+        NetworkManager.Instance.OnPlayerLeft(playerId);
     }
 
     public static void StartGame(NetDataReader reader)
