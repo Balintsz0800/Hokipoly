@@ -50,6 +50,7 @@ public class Movement : MonoBehaviour
             transform.rotation = targetRotation;
         }
         isMoving = false;
+        Debug.Log("Current Cell: " + currentCell);
         boardManager.PlayerLanded(currentCell);
     }
 }

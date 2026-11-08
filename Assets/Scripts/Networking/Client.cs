@@ -8,6 +8,8 @@ public class Client
     private NetManager client;
     private EventBasedNetListener listener;
 
+    public Action OnConnectedEvent;
+
     private NetPeer serverPeer;
 
     public Client(string ip, int port)
@@ -17,11 +19,11 @@ public class Client
      
         Debug.Log($"Connecting -> {ip}:{port}...");
      
-        client.Start();
-        client.Connect(ip, port, "a");
-        
         AssignEvents();
         RegisterPackets();
+        
+        client.Start();
+        client.Connect(ip, port, "a");
     }
 
     public void Disconnect()
@@ -45,16 +47,22 @@ public class Client
         Debug.Log($"Connected to {peer.Address}");
         
         serverPeer = peer;
+        
+        OnConnectedEvent?.Invoke();
     }
 
     private static void RegisterPackets()
     {
-        
+        PacketRouter.RegisterClientPacket((ushort)ServerPacketId.PlayerJoined, ClientHandle.PlayerJoined);
+        PacketRouter.RegisterClientPacket((ushort)ServerPacketId.PlayerLeft, ClientHandle.PlayerLeft);
+        PacketRouter.RegisterClientPacket((ushort)ServerPacketId.StartGame, ClientHandle.StartGame);
+        PacketRouter.RegisterClientPacket((ushort)ServerPacketId.UpdateMoney, ClientHandle.UpdateMoney);
+        PacketRouter.RegisterClientPacket((ushort)ServerPacketId.MovePlayer, ClientHandle.MovePlayer);
     }
     
     private static void OnNetworkReceive(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
     {
-        PacketRouter.HandleClientPacket(peer, reader);
+        PacketRouter.HandleClientPacket(reader);
     }
 
     public void SendPacket(ClientPacketId packetId, Action<NetDataWriter> writeData = null, DeliveryMethod deliveryMethod = DeliveryMethod.ReliableOrdered)

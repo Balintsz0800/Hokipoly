@@ -6,9 +6,16 @@ public class BoardManager : MonoBehaviour
     
     public void PlayerLanded(int finalCellIndex)
     {
+        if (finalCellIndex < 0 || finalCellIndex >= boardTiles.Length)
+        {
+            return;
+        }
+        
         BoardTile landedTile = boardTiles[finalCellIndex];
         
         ClearAllHighlights();
+        
+        Debug.Log("Tile type: " + boardTiles[finalCellIndex].Type);
         
         switch (landedTile.Type)
         {
@@ -17,6 +24,7 @@ public class BoardManager : MonoBehaviour
             case TileType.Purchased:
                 break;
             case TileType.Finder:
+                Debug.Log("Stepped on the finder tile");
                 HighlightTiles();
                 break;
             case TileType.Prison:

@@ -1,3 +1,4 @@
+using System;
 using LiteNetLib;
 using LiteNetLib.Utils;
 using UnityEngine;
@@ -11,12 +12,12 @@ public class Server
     {
         listener = new EventBasedNetListener();
         server = new NetManager(listener);
-        
-        Debug.Log("Starting server on port " + port);
-        server.Start(port);
-        
+
         AssignEvents();
         RegisterPackets();
+
+        Debug.Log("Starting server on port " + port);
+        server.Start(port);
     }
 
     public void Stop()
@@ -31,22 +32,75 @@ public class Server
 
     private void AssignEvents()
     {
+        listener.ConnectionRequestEvent += OnConnectionRequest;
         listener.NetworkReceiveEvent += OnNetworkReceive;
     }
 
-    private void RegisterPackets()
+    private static void RegisterPackets()
     {
-        PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Test, TestPacket);
+        PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Roll, ServerHandle.Roll);
     }
 
-    private static void TestPacket(NetPeer peer, NetDataReader reader)
+    private void OnConnectionRequest(ConnectionRequest request)
     {
-        string message = reader.GetString();
-        Debug.Log(message);
+        Debug.Log($"Connection request received from {request.RemoteEndPoint}");
+
+        if (server.ConnectedPeersCount < 6)
+            request.AcceptIfKey("a");
+        else
+            request.Reject();
     }
-    
+
     private static void OnNetworkReceive(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
     {
         PacketRouter.HandleServerPacket(peer, reader);
+    }
+
+    public void SendPacketToAll(ServerPacketId packetId, Action<NetDataWriter> writeData = null, DeliveryMethod deliveryMethod = DeliveryMethod.ReliableOrdered)
+    {
+        NetDataWriter writer = new NetDataWriter();
+
+        writer.Put((ushort)packetId);
+        writeData?.Invoke(writer);
+
+        server.SendToAll(writer, deliveryMethod);
+    }
+
+    public void SendPacketToAllExcept(ServerPacketId packetId, int peerIdExcept, Action<NetDataWriter> writeData, DeliveryMethod deliveryMethod = DeliveryMethod.ReliableOrdered)
+    {
+        NetDataWriter writer = new NetDataWriter();
+
+        writer.Put((ushort)packetId);
+        writeData?.Invoke(writer);
+
+        NetPeer excludedPeer = null;
+
+        foreach (NetPeer peer in server)
+        {
+            if (peer.Id == peerIdExcept)
+            {
+                excludedPeer = peer;
+                break;
+            }
+        }
+
+        server.SendToAll(writer, deliveryMethod, excludedPeer);
+    }
+
+    public void SendPacketTo(ServerPacketId packetId, int peerId, Action<NetDataWriter> writeData = null, DeliveryMethod deliveryMethod = DeliveryMethod.ReliableOrdered)
+    {
+        NetDataWriter writer = new NetDataWriter();
+
+        writer.Put((ushort)packetId);
+        writeData?.Invoke(writer);
+
+        foreach (NetPeer peer in server)
+        {
+            if (peer.Id == peerId)
+            {
+                peer.Send(writer, deliveryMethod);
+                break;
+            }
+        }
     }
 }

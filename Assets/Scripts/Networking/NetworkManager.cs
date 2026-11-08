@@ -13,22 +13,36 @@ public class NetworkManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
-    public void Connect()
+    private void FixedUpdate()
     {
-        string ip = UIManager.Instance.NetworkUI.GetIP();
+        Client?.Update();
+        Server?.Update();
+    }
 
-        Client = new Client(ip, 6700);
+    public void Connect(string ip)
+    {
+        Client = new Client(ip, 6700)
+        {
+            OnConnectedEvent = OnClientConnected
+        };
     }
 
     public void Host()
     {
         Server = new Server(6700);
         isHost = true;
+        
+        OnServerStarted();
     }
 
     public void Disconnect()
@@ -38,6 +52,18 @@ public class NetworkManager : MonoBehaviour
         
         Clear();
     }
+
+
+    private void OnClientConnected()
+    {
+        UIManager.Instance.SwitchUIState(UIState.Lobby);
+    }
+    
+    private void OnServerStarted()
+    {
+        UIManager.Instance.SwitchUIState(UIState.Lobby);   
+    }
+    
 
     private void Clear()
     {
