@@ -1,10 +1,20 @@
 public static class ServerSend
 {
-    public static void PlayerJoined(int playerId)
+    public static void PlayerJoined(int playerId, string username)
     {
         NetworkManager.Instance.Server.SendPacketToAllExcept(ServerPacketId.PlayerJoined, playerId, writer =>
         {
             writer.Put((ushort)playerId);
+            writer.Put(username);
+        });
+    }
+    
+    public static void PlayerJoined(int target, int playerId, string username)
+    {
+        NetworkManager.Instance.Server.SendPacketTo(ServerPacketId.PlayerJoined, target, writer =>
+        {
+            writer.Put((ushort)playerId);
+            writer.Put(username);
         });
     }
 

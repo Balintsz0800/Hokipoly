@@ -1,5 +1,6 @@
 public enum ClientPacketId : ushort
 {
+    Username,
     Roll
 }
 

@@ -34,21 +34,26 @@ public class Server
     {
         listener.ConnectionRequestEvent += OnConnectionRequest;
         listener.NetworkReceiveEvent += OnNetworkReceive;
+        listener.PeerDisconnectedEvent += OnPeerDisconnected;
     }
 
     private static void RegisterPackets()
     {
+        PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Username, ServerHandle.Username);
         PacketRouter.RegisterServerPacket((ushort)ClientPacketId.Roll, ServerHandle.Roll);
     }
 
     private void OnConnectionRequest(ConnectionRequest request)
     {
-        Debug.Log($"Connection request received from {request.RemoteEndPoint}");
-
         if (server.ConnectedPeersCount < 6)
             request.AcceptIfKey("a");
         else
             request.Reject();
+    }
+
+    private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
+    {
+        NetworkManager.Instance.OnPlayerLeft(peer.Id);
     }
 
     private static void OnNetworkReceive(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
