@@ -73,6 +73,7 @@ public class NetworkManager : MonoBehaviour
     
     private void OnServerStarted()
     {
+        myId = 0;
         UIManager.Instance.SwitchUIState(UIState.Lobby);
         OnPlayerJoined(0, "Host");
     }

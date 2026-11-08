@@ -14,6 +14,7 @@ public enum ServerPacketId : ushort
     
     PlayerReady,
     StartGame,
+    PlayerTurn,
     
     MovePlayer,
     UpdateMoney

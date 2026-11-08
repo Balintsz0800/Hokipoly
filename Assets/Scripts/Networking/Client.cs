@@ -64,6 +64,7 @@ public class Client
         PacketRouter.RegisterClientPacket((ushort)ServerPacketId.PlayerLeft, ClientHandle.PlayerLeft);
         PacketRouter.RegisterClientPacket((ushort)ServerPacketId.PlayerReady, ClientHandle.PlayerReady);
         PacketRouter.RegisterClientPacket((ushort)ServerPacketId.StartGame, ClientHandle.StartGame);
+        PacketRouter.RegisterClientPacket((ushort)ServerPacketId.PlayerTurn, ClientHandle.PlayerTurn);
         PacketRouter.RegisterClientPacket((ushort)ServerPacketId.UpdateMoney, ClientHandle.UpdateMoney);
         PacketRouter.RegisterClientPacket((ushort)ServerPacketId.MovePlayer, ClientHandle.MovePlayer);
     }

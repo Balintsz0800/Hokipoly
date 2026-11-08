@@ -10,7 +10,7 @@ public static class ServerSend
     
     public static void PlayerJoined(int playerId, string username)
     {
-        NetworkManager.Instance.Server.SendPacketToAllExcept(ServerPacketId.PlayerLeft, playerId, writer =>
+        NetworkManager.Instance.Server.SendPacketToAllExcept(ServerPacketId.PlayerJoined, playerId, writer =>
         {
             writer.Put((ushort)playerId);
             writer.Put(username);
@@ -28,7 +28,7 @@ public static class ServerSend
 
     public static void PlayerLeft(int playerId)
     {
-        NetworkManager.Instance.Server.SendPacketToAllExcept(ServerPacketId.PlayerJoined, playerId, writer =>
+        NetworkManager.Instance.Server.SendPacketToAllExcept(ServerPacketId.PlayerLeft, playerId, writer =>
         {
             writer.Put((ushort)playerId);
         });
@@ -48,6 +48,14 @@ public static class ServerSend
         NetworkManager.Instance.Server.SendPacketToAll(ServerPacketId.StartGame, writer =>
         {
 
+        });
+    }
+
+    public static void PlayerTurn(int playerId)
+    {
+        NetworkManager.Instance.Server.SendPacketToAll(ServerPacketId.PlayerTurn, writer =>
+        {
+            writer.Put((ushort)playerId);
         });
     }
 

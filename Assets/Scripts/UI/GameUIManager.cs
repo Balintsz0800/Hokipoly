@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class GameUIManager : MonoBehaviour
 {
+    [SerializeField] private GameObject rollButton;
     [SerializeField] private Transform playerHolder;
+    [SerializeField] private TMP_Text idk;
 
     private void BuildPlayerList()
     {
@@ -17,7 +20,8 @@ public class GameUIManager : MonoBehaviour
 
         foreach (Player player in players)
         {
-            PlayerListUIElement element = playerHolder.GetChild(player.id).gameObject.GetComponent<PlayerListUIElement>();
+            if (player.id < 0 || player.id >= playerHolder.childCount) continue;
+            PlayerListUIElement element = playerHolder.GetChild(player.id).GetComponent<PlayerListUIElement>();
 
             element.gameObject.SetActive(true);
             element.SetPlayerName(player.username);
@@ -31,13 +35,22 @@ public class GameUIManager : MonoBehaviour
 
     public void UpdateMoney(int playerId, int money)
     {
-        PlayerListUIElement element = playerHolder.GetChild(playerId).gameObject.GetComponent<PlayerListUIElement>();
-        
-        element.SetMoney(money);
+        if (playerId >= 0 && playerId < playerHolder.childCount)
+            playerHolder.GetChild(playerId).GetComponent<PlayerListUIElement>()?.SetMoney(money);
     }
 
     public void Rolandice()
     {
         GameManager.Instance.RollDice();
+    }
+
+    public void Bruhhh(string a)
+    {
+        idk.text = a;
+    }
+
+    public void SetRollButton(bool a)
+    {
+        rollButton.gameObject.SetActive(a);
     }
 }

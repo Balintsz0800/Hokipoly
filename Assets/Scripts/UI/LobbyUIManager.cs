@@ -102,13 +102,6 @@ public class LobbyUIManager : MonoBehaviour
 
     public void StartGame()
     {
-        ServerSend.StartGame();
-        UIManager.Instance.SwitchUIState(UIState.Game);
-
-        foreach (Player player in PlayerManager.Instance.players)
-        {
-            ServerSend.UpdateMoney(player.id, 1000000);
-            UIManager.Instance.GameUI.UpdateMoney(player.id, 1000000);
-        }
+        GameManager.Instance.StartGame();
     }
 }

@@ -37,10 +37,17 @@ public static class ClientHandle
         UIManager.Instance.SwitchUIState(UIState.Game);
     }
 
+    public static void PlayerTurn(NetDataReader reader)
+    {
+        int playerId = reader.GetUShort();
+        GameManager.Instance.PlayersTurn(playerId);
+    }
+
     public static void MovePlayer(NetDataReader reader)
     {
         int playerId = reader.GetUShort();
         int cell = reader.GetUShort();
+        if (PlayerManager.Instance.TryGetPlayer(playerId, out Player player)) player.currentCell = cell;
     }
 
     public static void UpdateMoney(NetDataReader reader)
