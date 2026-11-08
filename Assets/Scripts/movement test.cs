@@ -1,16 +1,35 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 public class movementtest : MonoBehaviour
 {
     [SerializeField] private Movement movement;
-    [SerializeField] private int step;
+    [SerializeField] private Dice dice;
+    
+    private bool isPlaying = false;
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isPlaying)
         {
-            movement.MoveCells(step);
+            dice.RollDice();
+            StartCoroutine(RollMove());
         }
+    }
+
+    private IEnumerator RollMove()
+    {
+        isPlaying = true;
+        
+        dice.RollDice();
+
+        while (dice.IsRolling())
+        {
+            yield return null;
+        }
+        
+        movement.MoveCells(dice.currentNumber);
+
+        isPlaying = false;
     }
 }
