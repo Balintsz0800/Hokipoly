@@ -3413,7 +3413,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19155844, g: 0, b: 0.3490566, a: 0}
+  m_BackGroundColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3462,13 +3462,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388309360}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37006244, y: 0.34563026, z: -0.15064308, w: 0.8490584}
-  m_LocalPosition: {x: -22.08, y: 16.54, z: -54.83}
+  m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 47.1, y: 44.3, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
 --- !u!114 &388309364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3525,7 +3525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d45a00fc665cd44b0ac75df90d79c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  dragSpeed: 1
+  dragSpeed: 0.02
   smoothTime: 0.1
   zoomSpeed: 5
   minZoom: 5
@@ -4715,7 +4715,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507183472}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -22.59972}
+  m_LocalPosition: {x: 0, y: 0, z: 24}
   m_LocalScale: {x: 50, y: 0.1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4724,7 +4724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.88225, y: -16}
+  m_AnchoredPosition: {x: 24, y: -16}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &522555098
@@ -7039,20 +7039,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0188103, y: 4.6819186, z: 2.1721077}
   m_Center: {x: -0.0013401507, y: 0.42105526, z: -0.042078257}
---- !u!114 &898900590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898900583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2b9480e3ce87e4093143b44530fc1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::movementtest
-  movement: {fileID: 898900585}
-  dice: {fileID: 1624756378}
 --- !u!1 &900954020
 GameObject:
   m_ObjectHideFlags: 0
@@ -9948,7 +9934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873087949531538454, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.71
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 3873087949531538454, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9956,7 +9942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873087949531538454, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -44.489
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 3873087949531538454, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9999,9 +9985,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 681172636218456463, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
       insertIndex: -1
       addedObject: {fileID: 898900585}
-    - targetCorrespondingSourceObject: {fileID: 681172636218456463, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 898900590}
   m_SourcePrefab: {fileID: 100100000, guid: 217f931f6eecf944bbc03d3efce52730, type: 3}
 --- !u!1 &1340587745
 GameObject:
@@ -12443,17 +12426,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardTile
   tileType: 0
   highLight: {fileID: 1580335027}
---- !u!114 &1624756378 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8824589066377924213, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
-  m_PrefabInstance: {fileID: 8509889028448489194}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c608780298b296c4b9662f7f0865276f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dice
 --- !u!1 &1631548104
 GameObject:
   m_ObjectHideFlags: 0
@@ -14142,7 +14114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9218458771297960476, guid: 8b839151c294d4f4da3c25a987a855de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.309999
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 9218458771297960476, guid: 8b839151c294d4f4da3c25a987a855de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14150,7 +14122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9218458771297960476, guid: 8b839151c294d4f4da3c25a987a855de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -44.619
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 9218458771297960476, guid: 8b839151c294d4f4da3c25a987a855de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16493,7 +16465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.252258
+      value: 25.2
       objectReference: {fileID: 0}
     - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16501,7 +16473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.343332
+      value: 28.6
       objectReference: {fileID: 0}
     - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
       propertyPath: m_LocalRotation.w

@@ -5,6 +5,8 @@ public class Player
 {
     public int id;
     public string username;
+
+    public bool ready;
 }
 
 public class PlayerManager : MonoBehaviour

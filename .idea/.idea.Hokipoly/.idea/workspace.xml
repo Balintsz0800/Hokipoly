@@ -11,17 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acd2d03a-84e3-478d-a74a-30badfa670d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPlayerUIElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPlayerUIElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hokipoly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hokipoly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ClientHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ClientSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Packet/ServerSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PacketId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PacketId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/movement test.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/movement test.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +33,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PacketId.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PacketRouter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyPlayerUIElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/NetworkUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/movement test.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -50,61 +45,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000875216826182" />
-      <entry key="MS500" value="1.1543203258616923" />
-      <entry key="S2" value="1.6267665102203452" />
-      <entry key="S5" value="1.8295495138952997" />
-      <entry key="S10" value="1.9107960894332634" />
-      <entry key="S30" value="1.9711296189915855" />
-      <entry key="S60" value="2.045994707918533" />
-      <entry key="M2" value="2.5379359159225565" />
-      <entry key="M5" value="12.406014422358135" />
-      <entry key="M10" value="57.773819521153136" />
-      <entry key="M15" value="115.35872765930156" />
-      <entry key="M30" value="275.2459623646457" />
-      <entry key="H1" value="500.3325156308877" />
-      <entry key="H2" value="779.0114894517354" />
-      <entry key="H4" value="1064.5539572250711" />
-      <entry key="D1" value="1490.1110068934433" />
-      <entry key="W1" value="1591.9458781791386" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0002475120658738" />
+      <entry key="S2" value="1.2786486174456766" />
+      <entry key="S5" value="4.3855579119237555" />
+      <entry key="S10" value="11.134335861128156" />
+      <entry key="S30" value="25.524946283308715" />
+      <entry key="S60" value="34.976527283941195" />
+      <entry key="M2" value="50.52695570253492" />
+      <entry key="M5" value="81.61698853962315" />
+      <entry key="M10" value="105.00260378374736" />
+      <entry key="M15" value="117.68070518894484" />
+      <entry key="M30" value="142.87471273739527" />
+      <entry key="H1" value="227.89148038483228" />
+      <entry key="H2" value="466.2124836453863" />
+      <entry key="H4" value="832.0808483404828" />
+      <entry key="D1" value="1544.9025689365315" />
+      <entry key="W1" value="1740.4196069762538" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.872381928507768E-80" />
-      <entry key="S2" value="1.3018487979709656E-20" />
-      <entry key="S5" value="1.1112818432395675E-8" />
-      <entry key="S10" value="1.0541985764302665E-4" />
-      <entry key="S30" value="0.050064154454174406" />
-      <entry key="S60" value="0.3105877149686366" />
-      <entry key="M2" value="1.0936664631530717" />
-      <entry key="M5" value="5.444593843502442" />
-      <entry key="M10" value="18.153426924296866" />
-      <entry key="M15" value="31.886159880780188" />
-      <entry key="M30" value="64.83414373504375" />
-      <entry key="H1" value="106.61615219040681" />
-      <entry key="H2" value="156.72365657073317" />
-      <entry key="H4" value="207.3420499762311" />
-      <entry key="D1" value="282.0479227544806" />
-      <entry key="W1" value="299.84672485108234" />
+      <entry key="MS100" value="4.0670540916368125E-32" />
+      <entry key="MS500" value="7.937239074932194E-7" />
+      <entry key="S2" value="0.04970043445887347" />
+      <entry key="S5" value="0.4558354880510922" />
+      <entry key="S10" value="0.9548607177828061" />
+      <entry key="S30" value="1.6832447037682374" />
+      <entry key="S60" value="2.5232025009588885" />
+      <entry key="M2" value="4.097337855402868" />
+      <entry key="M5" value="6.607112211866252" />
+      <entry key="M10" value="8.128019818633641" />
+      <entry key="M15" value="8.842477898201155" />
+      <entry key="M30" value="11.330455395161716" />
+      <entry key="H1" value="27.10067081019253" />
+      <entry key="H2" value="72.85265911670737" />
+      <entry key="H4" value="141.4566259465792" />
+      <entry key="D1" value="272.11864087454023" />
+      <entry key="W1" value="307.5627731786315" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.04575269279653215" />
-      <entry key="MS500" value="0.5667811357550269" />
-      <entry key="S2" value="1.2630644141793603" />
-      <entry key="S5" value="1.6374493764682014" />
-      <entry key="S10" value="1.8047575674382508" />
-      <entry key="S30" value="1.9827060602528694" />
-      <entry key="S60" value="2.335347764691913" />
-      <entry key="M2" value="3.6176239451097185" />
-      <entry key="M5" value="17.8298419237064" />
-      <entry key="M10" value="75.88681959530382" />
-      <entry key="M15" value="147.19254908297347" />
-      <entry key="M30" value="340.0185090074531" />
-      <entry key="H1" value="606.8908661559244" />
-      <entry key="H2" value="935.6872310804707" />
-      <entry key="H4" value="1271.8616649799749" />
-      <entry key="D1" value="1772.1505661683827" />
-      <entry key="W1" value="1891.7913174889493" />
+      <entry key="MS100" value="0.07966003920745389" />
+      <entry key="MS500" value="0.6029979628182683" />
+      <entry key="S2" value="1.1578825202043075" />
+      <entry key="S5" value="4.634438310506986" />
+      <entry key="S10" value="11.866675945447595" />
+      <entry key="S30" value="27.047320884711095" />
+      <entry key="S60" value="37.380282546770516" />
+      <entry key="M2" value="54.5331354273721" />
+      <entry key="M5" value="88.16720383069033" />
+      <entry key="M10" value="113.09575108461361" />
+      <entry key="M15" value="126.49791541782473" />
+      <entry key="M30" value="154.18973416320867" />
+      <entry key="H1" value="254.97567693480616" />
+      <entry key="H2" value="539.0423186002832" />
+      <entry key="H4" value="973.513902693634" />
+      <entry key="D1" value="1817.0131392331039" />
+      <entry key="W1" value="2047.9810618777406" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -116,33 +111,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Documents/HokiPolyBuild\Hokipoly.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\balu\Documents\HokiPolyBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\6000.2.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Unity\Projects\Hokipoly -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity\Projects\Hokipoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -152,7 +158,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\6000.2.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Unity\Projects\Hokipoly -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity\Projects\Hokipoly" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -190,6 +196,7 @@
       <workItem from="1793978599938" duration="5535000" />
       <workItem from="1794063372266" duration="7233000" />
       <workItem from="1794129199289" duration="2679000" />
+      <workItem from="1794160808678" duration="2842000" />
     </task>
     <servers />
   </component>
