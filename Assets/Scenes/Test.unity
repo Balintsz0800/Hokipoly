@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 16923415}
   - component: {fileID: 16923414}
   m_Layer: 0
-  m_Name: Text (TMP) (7)
+  m_Name: No Batido concert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 21426343}
   - component: {fileID: 21426342}
   m_Layer: 0
-  m_Name: Text (TMP) (4)
+  m_Name: 100H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 32594106}
   - component: {fileID: 32594105}
   m_Layer: 0
-  m_Name: Text (TMP) (8)
+  m_Name: 180H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 87164538}
   - component: {fileID: 87164537}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Playgound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1519,7 +1519,7 @@ GameObject:
   - component: {fileID: 133656694}
   - component: {fileID: 133656693}
   m_Layer: 0
-  m_Name: Text (TMP) (3)
+  m_Name: 110H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1698,7 +1698,7 @@ GameObject:
   - component: {fileID: 133806837}
   - component: {fileID: 133806836}
   m_Layer: 0
-  m_Name: Text (TMP) (21)
+  m_Name: Boneie's accommodation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,7 +2001,7 @@ GameObject:
   - component: {fileID: 150774010}
   - component: {fileID: 150774011}
   m_Layer: 0
-  m_Name: Cell (2)
+  m_Name: Cell 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2048,7 +2048,7 @@ GameObject:
   - component: {fileID: 176843483}
   - component: {fileID: 176843484}
   m_Layer: 0
-  m_Name: Cell (25)
+  m_Name: Cell 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 245935577}
   - component: {fileID: 245935576}
   m_Layer: 0
-  m_Name: Text (TMP) (12)
+  m_Name: Mango island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2449,7 +2449,7 @@ GameObject:
   - component: {fileID: 248075392}
   - component: {fileID: 248075391}
   m_Layer: 0
-  m_Name: Text (TMP) (2)
+  m_Name: Folk valley
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2627,7 +2627,7 @@ GameObject:
   - component: {fileID: 279412707}
   - component: {fileID: 279412708}
   m_Layer: 0
-  m_Name: Cell (13)
+  m_Name: Cell 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2985,7 +2985,7 @@ GameObject:
   - component: {fileID: 354451317}
   - component: {fileID: 354451316}
   m_Layer: 0
-  m_Name: Text (TMP) (11)
+  m_Name: Aura farmer's beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3163,7 +3163,7 @@ GameObject:
   - component: {fileID: 354505866}
   - component: {fileID: 354505867}
   m_Layer: 0
-  m_Name: Cell (14)
+  m_Name: Cell 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3337,7 +3337,7 @@ GameObject:
   - component: {fileID: 385455345}
   - component: {fileID: 385455346}
   m_Layer: 0
-  m_Name: Cell (21)
+  m_Name: Cell 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3544,7 +3544,7 @@ GameObject:
   - component: {fileID: 395629573}
   - component: {fileID: 395629572}
   m_Layer: 0
-  m_Name: Text (TMP) (23)
+  m_Name: 675H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3973,7 +3973,7 @@ GameObject:
   - component: {fileID: 440098686}
   - component: {fileID: 440098685}
   m_Layer: 0
-  m_Name: Text (TMP) (16)
+  m_Name: 395H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4323,7 +4323,7 @@ GameObject:
   - component: {fileID: 472421630}
   - component: {fileID: 472421631}
   m_Layer: 0
-  m_Name: Cell (20)
+  m_Name: Cell 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4738,7 +4738,7 @@ GameObject:
   - component: {fileID: 522555099}
   - component: {fileID: 522555100}
   m_Layer: 0
-  m_Name: Cell (27)
+  m_Name: Cell 35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4805,8 +4805,8 @@ Transform:
   m_GameObject: {fileID: 573135946}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.132, y: 0.041, z: 0.107}
-  m_LocalScale: {x: 5.739, y: 4.55, z: 1}
+  m_LocalPosition: {x: -0.13048, y: 0.041, z: -0.09927}
+  m_LocalScale: {x: 5.735958, y: 4.137489, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1990691530}
@@ -4913,7 +4913,7 @@ GameObject:
   - component: {fileID: 604289494}
   - component: {fileID: 604289493}
   m_Layer: 0
-  m_Name: Text (TMP) (8)
+  m_Name: 67's house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5217,7 +5217,7 @@ GameObject:
   - component: {fileID: 632532666}
   - component: {fileID: 632532665}
   m_Layer: 0
-  m_Name: Text (TMP) (22)
+  m_Name: 625H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5396,7 +5396,7 @@ GameObject:
   - component: {fileID: 669167159}
   - component: {fileID: 669167158}
   m_Layer: 0
-  m_Name: Text (TMP) (15)
+  m_Name: 370H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5575,7 +5575,7 @@ GameObject:
   - component: {fileID: 691272701}
   - component: {fileID: 691272700}
   m_Layer: 0
-  m_Name: Text (TMP) (29)
+  m_Name: Touch grass Valley
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5620,7 +5620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Touch grass valley
+  m_text: Touch grass Valley
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -5878,7 +5878,7 @@ GameObject:
   - component: {fileID: 725178367}
   - component: {fileID: 725178368}
   m_Layer: 0
-  m_Name: Cell (26)
+  m_Name: Cell 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5928,7 +5928,7 @@ GameObject:
   - component: {fileID: 730404975}
   - component: {fileID: 730404974}
   m_Layer: 0
-  m_Name: Text (TMP) (26)
+  m_Name: Lord verity's domain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6358,7 +6358,7 @@ GameObject:
   - component: {fileID: 816188509}
   - component: {fileID: 816188510}
   m_Layer: 0
-  m_Name: Cell (28)
+  m_Name: Cell 34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6408,7 +6408,7 @@ GameObject:
   - component: {fileID: 847366466}
   - component: {fileID: 847366465}
   m_Layer: 0
-  m_Name: Text (TMP) (2)
+  m_Name: 80H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6587,7 +6587,7 @@ GameObject:
   - component: {fileID: 852073242}
   - component: {fileID: 852073241}
   m_Layer: 0
-  m_Name: Text (TMP) (9)
+  m_Name: 220H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6890,7 +6890,7 @@ GameObject:
   - component: {fileID: 897592098}
   - component: {fileID: 897592099}
   m_Layer: 0
-  m_Name: Cell (12)
+  m_Name: Cell 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7175,7 +7175,7 @@ GameObject:
   - component: {fileID: 933536196}
   - component: {fileID: 933536197}
   m_Layer: 0
-  m_Name: Cell (4)
+  m_Name: Cell 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7222,7 +7222,7 @@ GameObject:
   - component: {fileID: 938674388}
   - component: {fileID: 938674389}
   m_Layer: 0
-  m_Name: Cell (11)
+  m_Name: Cell 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7271,7 +7271,7 @@ GameObject:
   - component: {fileID: 942533106}
   - component: {fileID: 942533107}
   m_Layer: 0
-  m_Name: Cell (6)
+  m_Name: Cell 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7446,7 +7446,7 @@ GameObject:
   - component: {fileID: 960089712}
   - component: {fileID: 960089711}
   m_Layer: 0
-  m_Name: Text (TMP) (14)
+  m_Name: 340H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7624,7 +7624,7 @@ GameObject:
   - component: {fileID: 967643884}
   - component: {fileID: 967643885}
   m_Layer: 0
-  m_Name: Cell (24)
+  m_Name: Cell 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7672,7 +7672,7 @@ GameObject:
   - component: {fileID: 969342946}
   - component: {fileID: 969342945}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: 60H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7937,7 +7937,7 @@ GameObject:
   - component: {fileID: 1001879696}
   - component: {fileID: 1001879695}
   m_Layer: 0
-  m_Name: Text (TMP) (10)
+  m_Name: Montagem tomada concert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8116,7 +8116,7 @@ GameObject:
   - component: {fileID: 1004965080}
   - component: {fileID: 1004965079}
   m_Layer: 0
-  m_Name: Text (TMP) (4)
+  m_Name: Huss Valley
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8294,7 +8294,7 @@ GameObject:
   - component: {fileID: 1010114426}
   - component: {fileID: 1010114427}
   m_Layer: 0
-  m_Name: Cell (23)
+  m_Name: Cell 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8392,7 +8392,7 @@ GameObject:
   - component: {fileID: 1078277173}
   - component: {fileID: 1078277174}
   m_Layer: 0
-  m_Name: Cell (15)
+  m_Name: Cell 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8441,7 +8441,7 @@ GameObject:
   - component: {fileID: 1090580802}
   - component: {fileID: 1090580803}
   m_Layer: 0
-  m_Name: Cell (16)
+  m_Name: Cell 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8489,7 +8489,7 @@ GameObject:
   - component: {fileID: 1092409496}
   - component: {fileID: 1092409495}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: 70H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8667,7 +8667,7 @@ GameObject:
   - component: {fileID: 1118381951}
   - component: {fileID: 1118381952}
   m_Layer: 0
-  m_Name: Cell (32)
+  m_Name: Cell 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8842,7 +8842,7 @@ GameObject:
   - component: {fileID: 1176143896}
   - component: {fileID: 1176143895}
   m_Layer: 0
-  m_Name: Text (TMP) (24)
+  m_Name: Phonk Country
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9021,7 +9021,7 @@ GameObject:
   - component: {fileID: 1181039309}
   - component: {fileID: 1181039308}
   m_Layer: 0
-  m_Name: Text (TMP) (22)
+  m_Name: Montagem batchi concert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9488,25 +9488,25 @@ Transform:
   - {fileID: 1090580802}
   - {fileID: 1775525589}
   - {fileID: 240574535}
-  - {fileID: 1996471997}
-  - {fileID: 1492765461}
-  - {fileID: 472421630}
-  - {fileID: 385455345}
-  - {fileID: 1691877812}
-  - {fileID: 1010114426}
-  - {fileID: 967643884}
-  - {fileID: 176843483}
   - {fileID: 725178367}
+  - {fileID: 176843483}
+  - {fileID: 967643884}
+  - {fileID: 1010114426}
+  - {fileID: 1691877812}
+  - {fileID: 385455345}
+  - {fileID: 472421630}
+  - {fileID: 1492765461}
+  - {fileID: 1996471997}
   - {fileID: 331551027}
-  - {fileID: 522555099}
-  - {fileID: 816188509}
-  - {fileID: 1907782497}
-  - {fileID: 1847784128}
-  - {fileID: 2107289673}
-  - {fileID: 1118381951}
-  - {fileID: 1613880872}
-  - {fileID: 1990691530}
   - {fileID: 1595679815}
+  - {fileID: 1990691530}
+  - {fileID: 1613880872}
+  - {fileID: 1118381951}
+  - {fileID: 2107289673}
+  - {fileID: 1847784128}
+  - {fileID: 1907782497}
+  - {fileID: 816188509}
+  - {fileID: 522555099}
   m_Father: {fileID: 507183476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272319324
@@ -9521,7 +9521,7 @@ GameObject:
   - component: {fileID: 1272319327}
   - component: {fileID: 1272319326}
   m_Layer: 0
-  m_Name: Text (TMP) (25)
+  m_Name: Falsity's castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9699,7 +9699,7 @@ GameObject:
   - component: {fileID: 1311067053}
   - component: {fileID: 1311067054}
   m_Layer: 0
-  m_Name: Cell (9)
+  m_Name: Cell 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9749,7 +9749,7 @@ GameObject:
   - component: {fileID: 1319693314}
   - component: {fileID: 1319693313}
   m_Layer: 0
-  m_Name: Text (TMP) (11)
+  m_Name: 260H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9997,7 +9997,7 @@ GameObject:
   - component: {fileID: 1340587746}
   - component: {fileID: 1340587747}
   m_Layer: 0
-  m_Name: Cell (5)
+  m_Name: Cell 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10296,7 +10296,7 @@ GameObject:
   - component: {fileID: 1393898494}
   - component: {fileID: 1393898495}
   m_Layer: 0
-  m_Name: Cell (8)
+  m_Name: Cell 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10471,7 +10471,7 @@ GameObject:
   - component: {fileID: 1420647021}
   - component: {fileID: 1420647020}
   m_Layer: 0
-  m_Name: Text (TMP) (12)
+  m_Name: 290H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10775,7 +10775,7 @@ GameObject:
   - component: {fileID: 1443262267}
   - component: {fileID: 1443262266}
   m_Layer: 0
-  m_Name: Text (TMP) (17)
+  m_Name: 420H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10954,7 +10954,7 @@ GameObject:
   - component: {fileID: 1457848557}
   - component: {fileID: 1457848556}
   m_Layer: 0
-  m_Name: Text (TMP) (20)
+  m_Name: Chica's airport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11257,7 +11257,7 @@ GameObject:
   - component: {fileID: 1492765461}
   - component: {fileID: 1492765462}
   m_Layer: 0
-  m_Name: Cell (19)
+  m_Name: Cell 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11430,7 +11430,7 @@ GameObject:
   - component: {fileID: 1533397764}
   - component: {fileID: 1533397763}
   m_Layer: 0
-  m_Name: Text (TMP) (19)
+  m_Name: 490H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11609,7 +11609,7 @@ GameObject:
   - component: {fileID: 1534162244}
   - component: {fileID: 1534162243}
   m_Layer: 0
-  m_Name: Text (TMP) (28)
+  m_Name: Montagem Uranium concert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11930,8 +11930,8 @@ Transform:
   m_GameObject: {fileID: 1580335027}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.132, y: 0.041, z: 0.079}
-  m_LocalScale: {x: 5.739, y: 4.15, z: 1}
+  m_LocalPosition: {x: -0.13055, y: 0.041, z: -0.12848}
+  m_LocalScale: {x: 5.7359, y: 4.564963, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1613880872}
@@ -12038,7 +12038,7 @@ GameObject:
   - component: {fileID: 1589769186}
   - component: {fileID: 1589769185}
   m_Layer: 0
-  m_Name: Text (TMP) (21)
+  m_Name: 575H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12216,7 +12216,7 @@ GameObject:
   - component: {fileID: 1595679815}
   - component: {fileID: 1595679816}
   m_Layer: 0
-  m_Name: Cell (35)
+  m_Name: Cell 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12390,7 +12390,7 @@ GameObject:
   - component: {fileID: 1613880872}
   - component: {fileID: 1613880873}
   m_Layer: 0
-  m_Name: Cell (33)
+  m_Name: Cell 29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12688,7 +12688,7 @@ GameObject:
   - component: {fileID: 1680338569}
   - component: {fileID: 1680338568}
   m_Layer: 0
-  m_Name: Text (TMP) (18)
+  m_Name: Verity'a mansion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12866,7 +12866,7 @@ GameObject:
   - component: {fileID: 1691877812}
   - component: {fileID: 1691877813}
   m_Layer: 0
-  m_Name: Cell (22)
+  m_Name: Cell 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12914,7 +12914,7 @@ GameObject:
   - component: {fileID: 1693341886}
   - component: {fileID: 1693341885}
   m_Layer: 0
-  m_Name: Text (TMP) (18)
+  m_Name: 460H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13343,7 +13343,7 @@ GameObject:
   - component: {fileID: 1699969443}
   - component: {fileID: 1699969442}
   m_Layer: 0
-  m_Name: Text (TMP) (6)
+  m_Name: Pearl's house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13521,7 +13521,7 @@ GameObject:
   - component: {fileID: 1775525589}
   - component: {fileID: 1775525590}
   m_Layer: 0
-  m_Name: Cell (17)
+  m_Name: Cell 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13571,7 +13571,7 @@ GameObject:
   - component: {fileID: 1817417540}
   - component: {fileID: 1817417539}
   m_Layer: 0
-  m_Name: Text (TMP) (23)
+  m_Name: Grimace shake shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13750,7 +13750,7 @@ GameObject:
   - component: {fileID: 1829158419}
   - component: {fileID: 1829158418}
   m_Layer: 0
-  m_Name: Text (TMP) (19)
+  m_Name: Suncream shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13929,7 +13929,7 @@ GameObject:
   - component: {fileID: 1832847295}
   - component: {fileID: 1832847294}
   m_Layer: 0
-  m_Name: Text (TMP) (27)
+  m_Name: Cruelity mansion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14168,7 +14168,7 @@ GameObject:
   - component: {fileID: 1847784128}
   - component: {fileID: 1847784129}
   m_Layer: 0
-  m_Name: Cell (30)
+  m_Name: Cell 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14217,7 +14217,7 @@ GameObject:
   - component: {fileID: 1875823582}
   - component: {fileID: 1875823583}
   m_Layer: 0
-  m_Name: Cell (1)
+  m_Name: Cell 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14267,7 +14267,7 @@ GameObject:
   - component: {fileID: 1882893636}
   - component: {fileID: 1882893635}
   m_Layer: 0
-  m_Name: Text (TMP) (10)
+  m_Name: 240H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14445,7 +14445,7 @@ GameObject:
   - component: {fileID: 1907782497}
   - component: {fileID: 1907782498}
   m_Layer: 0
-  m_Name: Cell (29)
+  m_Name: Cell 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14493,7 +14493,7 @@ GameObject:
   - component: {fileID: 1918982422}
   - component: {fileID: 1918982421}
   m_Layer: 0
-  m_Name: Text (TMP) (5)
+  m_Name: 120H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14672,7 +14672,7 @@ GameObject:
   - component: {fileID: 1964586639}
   - component: {fileID: 1964586638}
   m_Layer: 0
-  m_Name: Text (TMP) (6)
+  m_Name: 140H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14850,7 +14850,7 @@ GameObject:
   - component: {fileID: 1990691530}
   - component: {fileID: 1990691531}
   m_Layer: 0
-  m_Name: Cell (34)
+  m_Name: Cell 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14899,7 +14899,7 @@ GameObject:
   - component: {fileID: 1996471997}
   - component: {fileID: 1996471998}
   m_Layer: 0
-  m_Name: Cell (18)
+  m_Name: Cell 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14948,7 +14948,7 @@ GameObject:
   - component: {fileID: 2001398598}
   - component: {fileID: 2001398599}
   m_Layer: 0
-  m_Name: Cell (3)
+  m_Name: Cell 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14998,7 +14998,7 @@ GameObject:
   - component: {fileID: 2002830019}
   - component: {fileID: 2002830018}
   m_Layer: 0
-  m_Name: Text (TMP) (13)
+  m_Name: 315H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15177,7 +15177,7 @@ GameObject:
   - component: {fileID: 2011809055}
   - component: {fileID: 2011809054}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Ice cream truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15481,7 +15481,7 @@ GameObject:
   - component: {fileID: 2031585111}
   - component: {fileID: 2031585110}
   m_Layer: 0
-  m_Name: Text (TMP) (3)
+  m_Name: Small grocery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15784,7 +15784,7 @@ GameObject:
   - component: {fileID: 2058095032}
   - component: {fileID: 2058095033}
   m_Layer: 0
-  m_Name: Cell (7)
+  m_Name: Cell 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15832,7 +15832,7 @@ GameObject:
   - component: {fileID: 2072162595}
   - component: {fileID: 2072162594}
   m_Layer: 0
-  m_Name: Text (TMP) (20)
+  m_Name: 520H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16010,7 +16010,7 @@ GameObject:
   - component: {fileID: 2084849603}
   - component: {fileID: 2084849604}
   m_Layer: 0
-  m_Name: Cell (10)
+  m_Name: Cell 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16057,7 +16057,7 @@ GameObject:
   - component: {fileID: 2107289673}
   - component: {fileID: 2107289674}
   m_Layer: 0
-  m_Name: Cell (31)
+  m_Name: Cell 31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16105,7 +16105,7 @@ GameObject:
   - component: {fileID: 2124872978}
   - component: {fileID: 2124872977}
   m_Layer: 0
-  m_Name: Text (TMP) (6)
+  m_Name: Lovity's house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16284,7 +16284,7 @@ GameObject:
   - component: {fileID: 2146244867}
   - component: {fileID: 2146244866}
   m_Layer: 0
-  m_Name: Text (TMP) (7)
+  m_Name: 160H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16462,6 +16462,10 @@ PrefabInstance:
     - target: {fileID: 3001060862609719127, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
       propertyPath: m_Name
       value: Dice
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001060862609719127, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546867150113972100, guid: 5c8e3d6f99707f14aa54b1824629b031, type: 3}
       propertyPath: m_LocalPosition.x
